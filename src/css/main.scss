@@ -1,0 +1,542 @@
+$color-white: #FFF;
+$color-orange: #FF5F05;
+$color-black: #000;
+
+$height-menu: 60px;
+$height-section: 300px;
+$height-section-lg: 730px;
+$height-section-xl: 600px;
+
+$font-family: 'Copperplate', sans-serif;
+$font-weight: 700;
+$font-size: 24px;
+
+$bp-mobile: 400px;
+$bp-tablet: 960px;
+
+@mixin for-size($size) {
+  @if $size ==phone-only {
+    @media only screen and (max-width: $bp-mobile) {
+      @content;
+    }
+  }
+
+  @else if $size ==tablet-up {
+    @media only screen and (min-width: ($bp-mobile + 1)) {
+      @content;
+    }
+  }
+
+  @else if $size ==desktop-up {
+    @media only screen and (min-width: ($bp-tablet + 1)) {
+      @content;
+    }
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family;
+  color: $color-white;
+  background-image: url("../assets/uiuc.jpg");
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 650px 500px;
+  background-color: #0f2546;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: $color-orange;
+  padding: 90px 10px;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+
+#navbar a {
+  float: left;
+  color: $color-black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+#navbar #logo {
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.4s;
+  color: $color-black;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: $color-black;
+}
+
+#navbar a.active {
+  background-color: #13294B;
+  color: $color-white;
+}
+
+#navbar-right {
+  float: right;
+}
+
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important;
+  }
+
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  #navbar-right {
+    float: none;
+  }
+}
+
+.sections {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: $height-menu;
+
+  @include for-size(desktop-up) {
+    width: $bp-tablet;
+    margin: 0 auto;
+  }
+}
+
+%item {
+  width: 100%;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-margin-top: 108px;
+}
+
+.section {
+  @extend %item;
+  height: $height-section;
+}
+
+.header {
+  background:linear-gradient(rgba(255, 255, 255, 0.228), rgba(255, 255, 255, 0.384)), url("../assets/bg.gif");
+  background-size: cover;
+  backdrop-filter: blur(5px);
+  color: $color-black;
+  flex-direction: column;
+  font-size: 25px;
+  font-weight: 999;
+  text-align: center;
+  padding-top: 80px;
+
+  @include for-size(desktop-up) {
+    height: $height-section-lg;
+  }
+}
+
+.about {
+  background-color: #505050;
+
+  @include for-size(desktop-up) {
+    height: 300px;
+  }
+}
+
+.about-footer {
+  height: 200px;
+  background-color: #505050;
+
+  @include for-size(desktop-up) {
+    height: 100px;
+  }
+}
+
+.content {
+  height: $height-section-xl;
+
+  @include for-size(desktop-up) {
+    order: 2;
+  }
+}
+
+%feature {
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+
+  @include for-size(tablet-up) {
+    width: 50%;
+  }
+
+  @include for-size(desktop-up) {
+    width: 33.3%;
+  }
+}
+
+.feature-1 {
+  @extend %feature;
+  background-color: #505050;
+  border-right: 5px solid #A8A8A8;
+}
+
+.feature-2 {
+  @extend %feature;
+  background-color: #505050;
+}
+
+.feature-3 {
+  @extend %feature;
+  background-color: #505050;
+  border-left: 5px solid #A8A8A8;
+}
+
+.coursework {
+  height: $height-section-xl;
+  flex-direction: column;
+
+  @include for-size(desktop-up) {
+    height: 700px;
+  }
+}
+
+.blur {
+  background-color: rgba(0, 0, 0, 0.61);
+  backdrop-filter: blur(5px);
+  width: 70%;
+  height: 70%;
+  text-align: center;
+}
+
+.course-list {
+  list-style: none;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.work-exp {
+  background-color: #C0C0C0;
+  color: $color-black;
+
+  @include for-size(tablet-up) {
+    width: 50%;
+  }
+
+  @include for-size(desktop-up) {
+    width: 100%;
+    height: 150px;
+  }
+}
+
+.work-exp-footer {
+  height: 50px;
+  background-color: #C0C0C0;
+
+  @include for-size(desktop-up) {
+    height: 55px;
+  }
+}
+
+.button {
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  font-family: arial, sans-serif;
+  color: #069;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.slide-main {
+  background-color: #A9A9A9;
+  color: $color-black;
+  height: 475px;
+}
+
+.mySlides {
+  display: none;
+  height: 100%;
+  background-color: #A9A9A9;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-img {
+  width: 150px !important;
+  height: 90px !important;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.text {
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  width: 100%;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.slide-content {
+  padding-top: 100px;
+
+}
+
+.full-width {
+  width: 100%;
+  padding-top: 20px;
+  padding-right: 55px;
+  padding-left: 55px;
+}
+
+.text-align {
+  text-align: left;
+  font-size: 20px;
+}
+
+.right {
+  text-align: right;
+  padding-right: 75px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: $color-black;
+  text-align: center;
+}
+
+.video-dimensions {
+  width: 50%;
+  height: 50%;
+}
+
+.modal-text {
+  padding-top: 5px;
+}
+
+.modal-content {
+  background-color: gray;
+  margin: 7% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  color: $color-black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+}
+
+.modal-footer {
+  text-align: left;
+  padding-top: 5px;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: $color-white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+  color: $color-black;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.active {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.close {
+  color: rgb(58, 56, 56);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hobbies {
+  background-color: #C0C0C0;
+  border-top: 5px solid #A8A8A8;
+  color: rgb(0, 0, 0);
+
+  @include for-size(tablet-up) {
+    width: 50%;
+  }
+
+  @include for-size(desktop-up) {
+    width: 100%;
+    height: 100px;
+  }
+}
+
+.content2 {
+  background-color: #C0C0C0;
+  height: 540px;
+}
+
+.slideshow-container-1 {
+  color: $color-black;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides-1 {
+  display: none;
+}
+
+.slide-img-1 {
+  width: 100%;
+  height: 400px;
+}
+
+.text-1 {
+  font-size: 15px;
+  padding: 8px 12px;
+  position: relative;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.hobbies-footer {
+  height: 40px;
+  background-color: #C0C0C0;
+
+  @include for-size(desktop-up) {
+    height: 40px;
+  }
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: $color-black;
+  color: white;
+  text-align: center;
+  height: $height-section;
+}
+
+.footer-section {
+  padding-top: 0px;
+  width: 100%;
+  background-color: $color-black;
+}
+
+.footer-feature-1 {
+  @extend %feature;
+  background-color: $color-black;
+  top: 50%;
+  padding: 20px;
+}
+
+.footer-feature-2 {
+  @extend %feature;
+  background-color: $color-black;
+  padding: 20px;
+}
+
+.footer-feature-3 {
+  @extend %feature;
+  background-color: $color-black;
+  padding: 20px;
+}
+
+.footer-a {
+  cursor: pointer;
+  color: inherit;
+}
+
+.footer-text {
+  height: 15px;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 5px;
+}

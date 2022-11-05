@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4cca341fa0.js" crossorigin="anonymous"></script>
+    <title>MP1</title>
+</head>
+
+<body>
+    <div class="page">
+        <header id="navbar">
+            <span id="logo">Akshath SK</span>
+            <div id="navbar-right">
+                <a class="smooth-scroll aboutSectionId aboutFooterSectionId featureSectionId1 featureSectionId2 featureSectionId3"
+                    id="aboutId" href="#aboutSectionId">About</a>
+                <a class="smooth-scroll courseWorkSectionId" id="courseWorkId" href="#courseWorkSectionId">Course
+                    Work</a>
+                <a class="smooth-scroll workExpSectionId slideSectionId workExpFooterSectionId" id="workExpId"
+                    href="#workExpSectionId">Work Experience</a>
+                <a class="smooth-scroll hobbiesSectionId hobbiesSlideSectionId hobbiesFooterSectionId" id="hobbiesId"
+                    href="#hobbiesSectionId">Hobbies</a>
+                <a class="active smooth-scroll headerSectionId" id="headerId" href="#headerSectionId">Home</a>
+            </div>
+        </header>
+        <div class="sections">
+            <div class="section header" id="headerSectionId">
+                <h1>Hi! I'm Akshath</h1>
+                <p>I am a graduate student majoring in Computer Science at UIUC.</p>
+                <p>Welcome to my website, where I display my coursework and my interests.</p>
+            </div>
+            <div class="section about" id="aboutSectionId">
+                <h1>About Me</h1>
+            </div>
+            <div class="section feature-1" id="featureSectionId1">
+                <i class="fa-solid fa-building-columns fa-2x"></i>
+                <br/>
+                <p>I have a bachelors degree in Computer Science from BMS College of Engineering, Bangalore.</p>
+                <p>I am currently pursuing a Masters degree in Computer Science at The University of Illinois at
+                    Urbana-Champaign</p>
+                <p>I will be graduating in December 2023.</p>
+            </div>
+            <div class="section feature-2" id="featureSectionId2">
+                <i class="fa-solid fa-computer fa-2x"></i>
+                <br/>
+                <p>I have 3.5 years of experience in Software Development. </p>
+                <p>I have worked as a backend developer in the field of Logistics, Banking and E-commerce.</p>
+            </div>
+            <div class="section feature-3" id="featureSectionId3">
+                <i class="fa-solid fa-scroll fa-2x"></i>
+                <br/>
+                <p>My undergrad research was in the domain of Computer Networks.</p>
+                <p>I explored the benefits of using Vehicular Ad-Hoc Networks (VANETS) in real world scenarios. </p>
+                <p>I have published 2 research papers related to this.</p>
+            </div>
+            <div class="section about-footer" id="aboutFooterSectionId">
+            </div>
+            <div class="section coursework" id="courseWorkSectionId">
+                <div class="blur">
+                    <h1>My masters coursework</h1>
+
+                    <ul class="course-list">
+                        <li>Art of Web Programming</li>
+                        <li>Cloud Networks</li>
+                        <li>Software Engineering</li>
+                        <li>Distributed Systems</li>
+                        <li>Database Systems</li>
+                        <li>Algorithms</li>
+                        <li>Data Mining</li>
+                        <li>Text Information Systems</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section work-exp" id="workExpSectionId">
+                <h1>Work Experience</h1>
+            </div>
+            <div class="section slide-main" id="slideSectionId">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img class="slide-img" src="./assets/walmart.jpg" alt="Walmart Logo"/>
+                        <div class="text">SOFTWARE ENGINEER 3</div>
+                        <div class="full-width">
+                            <h4>Roles and Responsibilities</h4>
+                            <ul class="text-align">
+                                <li>Involved in next-generation solutions to enable Cloud Powered Checkouts for Walmart
+                                    stores, Sam’s Club stores, and websites </li>
+                                <li>Worked on Cloud Technologies including Azure Cloud, Kubernetes, and Docker </li>
+                                <li>Involved in designing and developing a hierarchical configuration tool using
+                                    reactive Java with Vertx, Azure SQL DB, Redis, Kafka </li>
+                                <li>Handled product integration with multiple clients including the development of
+                                    dynamic change requests in an agile environment</li>
+                                <li>“Walmart Bravo Award” for timely delivery of critical and complex features in March
+                                    2022 </li>
+                                <li>Awarded “Associate of the Month” across Transactional Systems at Walmart in February
+                                    2022</li>
+                            </ul>
+                        </div>
+                        <div class="right"><button class="button" id="myBtn">Click Here for more details</button></div>
+
+                        <div id="myModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <h3>More about Cloud Powered Checkouts</h3>
+                                <div>
+                                    <video id="videoId" controls="controls" preload='none' class="video-dimensions">
+                                        <source id='mp4' src="./assets/walmart-video.mp4" type='video/mp4' />
+                                        <p>Your user agent does not support the HTML5 Video element.</p>
+                                    </video>
+                                </div>
+                                <p class="text-align modal-text">
+                                    CPC is currently leveraged in all U.S. stores and clubs and in most of our global
+                                    markets. Because it is built using a microservices strategy, it makes the solution
+                                    highly customizable.
+
+                                    An example of this is how our stores in Canada are using CPC to create a new
+                                    self-service checkout experience with a different layout and hardware supplier than
+                                    our other markets. Developers can take the easily discoverable services and client
+                                    framework and build them together in a way that meets the requirements, works with
+                                    their existing systems, and provides a customer experience applicable to their
+                                    business needs. The loosely coupled approach unlocked our many businesses and
+                                    markets to rapidly develop unique experiences for their checkout.
+                                </p>
+                                <footer class="modal-footer"><span>Reference :</span> <a
+                                        href="https://corporate.walmart.com/newsroom/2021/07/22/what-sprouted-in-the-garden-center-has-flourished-across-walmart"
+                                        target="_blank">Walmart Website</a></footer>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img class="slide-img" src="./assets/ms.jpg" alt="Morgan Stanley logo"/>
+                        <div class="text">SENIOR SOFTWARE ENGINEER</div>
+                        <div class="full-width">
+                            <h4>Roles and Responsibilities</h4>
+                            <ul class="text-align">
+                                <li>Worked on a client project as Technical Consultant for Treasury Tech at Morgan
+                                    Stanley </li>
+                                <li>Delivered a real-time dashboard using Java which reduced the time required by the
+                                    treasury to get reports</li>
+                                <li>Involved in IBM DB2 OLTP Database Migration from v9.5 to v11.2 </li>
+                                <li>Handled integration of a business-critical product with downstream systems like
+                                    Trading and Unsecured Funding </li>
+                                <li>Independently developed a generic annotation-based asynchronous library for teams to
+                                    use across Morgan Stanley </li>
+                                <li>Worked on generic DevOps to enable one-click deployment of new changes in production
+                                    environments</li>
+                                <li>Involved in software development lifecycle from requirement gathering, design,
+                                    implementation, testing, deployment, and maintenance </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img class="slide-img" src="./assets/fedex.jpg" alt="FedEx logo"/>
+                        <div class="text">INTERN - SOFTWARE ENGINEER</div>
+                        <div class="full-width">
+                            <h4>Roles and Responsibilities</h4>
+                            <ul class="text-align">
+                                <li>Worked on a client project as Technical Consultant for FedEx</li>
+                                <li>Involved in the development of the project “Random Drug Tests” for FedEx pilots
+                                    using Java with the Spring Boot framework </li>
+                                <li>Worked on a generic microservice capable of handling any failures in sending emails.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a class="prev" id="prevModalId">&#10094;</a>
+                    <a class="next" id="nextModalId">&#10095;</a>
+                </div>
+            </div>
+            <div class="section work-exp-footer" id="workExpFooterSectionId">
+            </div>
+
+            <div class="section hobbies" id="hobbiesSectionId">
+                <h1>Hobbies</h1>
+            </div>
+
+            <div class="section content2" id="hobbiesSlideSectionId">
+                <div class="slideshow-container-1">
+                    <div class="mySlides-1 fade">
+                        <div class="align-center">SOCCER</div>
+                        <img class="slide-img-1" src="./assets/manu.jpg" alt="Soccer logo"/>
+                        <br />
+                        <div class="text-1">I have represented my school and college in various football tournaments. I
+                            hope to play for the UIUC Soccer team soon. Manchester United is my favorite English
+                            Football team.</div>
+                    </div>
+
+                    <div class="mySlides-1 fade">
+                        <div class="align-center">SWIMMING</div>
+                        <img class="slide-img-1" src="./assets/swimming.jpg" alt="Swimming logo"/>
+                        <br />
+                        <div class="text-1">I enjoy swimming as a recreation activity. Freestyle, backstroke and
+                            breaststroke are my favourite styles of swimming. </div>
+                    </div>
+
+
+                    <div class="mySlides-1 fade">
+                        <div class="align-center">BADMINTON</div>
+                        <img class="slide-img-1" src="./assets/badminton.jpg" alt="Badminton logo"/>
+                        <br />
+                        <div class="text-1">I play badminton for its health benefits. It counts as a moderate-intensity
+                            activity, and helps with both physical and mental health.</div>
+                    </div>
+
+                    <a class="prev" id="footerPrevId">&#10094;</a>
+                    <a class="next" id="footerNextId">&#10095;</a>
+                </div>
+            </div>
+            <div class="section hobbies-footer" id="hobbiesFooterSectionId">
+            </div>
+
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="sections footer-section">
+            <div class="section footer-feature-1" id="footerSectionId1">
+                <h3>Contact Me</h3>
+                <br /><br /><br />
+                <a href="mailto:akshath.sk@gmail.com">Personal Email</a>
+                <br />
+                <a href="mailto:sk117@illinois.edu">University Email</a>
+            </div>
+            <div class="section footer-feature-2" id="footerSectionId2">
+                <h2>Links</h2>
+                <br /><br />
+                <a href="https://github.com/akshathsk" class="footer-a" target="_blank"><i
+                        class="fa-brands fa-github fa-lg"></i></a>
+                <br /><br />
+                <a href="https://www.linkedin.com/in/akshathsk" class="footer-a" target="_blank"><i
+                        class="fa-brands fa-linkedin fa-lg"></i></a>
+                <br /><br />
+                <a href="https://www.facebook.com/akshathskroxz/" class="footer-a" target="_blank"><i
+                        class="fa-brands fa-facebook fa-lg"></i></a>
+            </div>
+            <div class="section footer-feature-3" id="footerSectionId3">
+                <h2>Navigation</h2>
+                <br /><br /><br />
+                <a class="smooth-scroll" href="#headerSectionId">Home</a>
+                <br />
+                <a class="smooth-scroll" href="#aboutSectionId">About</a>
+            </div>
+            <div class="footer-text">
+                <p>
+                    &copy; 2022 Akshath SK
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
